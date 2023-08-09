@@ -1,0 +1,13 @@
+[Unit]
+Description=Auth API Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/app/auth-api
+ExecStart=/bin/bash /app/auth-api/auth-api-launcher.sh
+
+[Install]
+WantedBy=multi-user.target
